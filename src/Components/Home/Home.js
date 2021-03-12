@@ -22,7 +22,7 @@ const Home = () => {
             <div>
                 <img style={{width: '100%',height: '720px'}}src="https://www.thesportsdb.com/images/media/team/stadium/w1anwa1588432105.jpg" alt=""/>
             </div>
-            <div className="row" style={bgColor}>
+            <div className="row row-cols-1 row-cols-md-4 g-4 mt-5" style={bgColor}>
                 {
                     teams.map(team => <TeamList team={team}></TeamList>)
                 }

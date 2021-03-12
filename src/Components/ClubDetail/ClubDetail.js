@@ -24,7 +24,6 @@ const ClubDetail = () => {
         <div className="text-center mb-3">
         <img style={{width:'100%', height:'500px'}} src={strStadiumThumb} alt="..." />
 </div>
-        
        
       <div className="row m-auto w-75 text-light d-flex justify-content-evenly bg-primary" style={{borderRadius: '5px'}}>
                 <div className="col-md-6 m-auto">
@@ -38,7 +37,6 @@ const ClubDetail = () => {
                     {
                         strGender === 'Male' ? <img className="w-50" src={player} alt="" srcset="" /> : <img className="w-100" src={strTeamBadge} alt="" srcset="" />
                     }
-
                 </div>  
             </div>
             <div style={{marginLeft: '12%', marginRight: '12%', marginTop: '2%'}}>
@@ -48,29 +46,6 @@ const ClubDetail = () => {
                 <a href="https://www.twitter.com/" style={socialMedia}><FontAwesomeIcon icon={faTwitter} size="2x"/></a>
                 </div>
             </div>
-
-
-
-
-
-
-
-        
-        /* <div>
-            <img style={{width:'100%', height:'720px'}} src={strStadiumThumb} alt=""/>
-            <img src={strTeamBadge} alt=""/>
-            <h3>{strAlternate}</h3>
-            <h4>Founded: {intFormedYear}</h4>
-            <h4>Country: {strCountry}</h4>
-            <h4>Sport Type: {strSport}</h4>
-            <h4>Gender: {strGender}</h4>
-            <p>{strDescriptionEN}</p>
-            <p>{strStadiumDescription}</p> <br/>
-            <a href="https://www.facebook.com/"><FontAwesomeIcon icon={faFacebook}/></a>
-            <a href="https://www.instagram.com/"><FontAwesomeIcon icon={faInstagram}/></a>
-            <a href="https://www.twitter.com/"><FontAwesomeIcon icon={faTwitter}/></a>
-            
-        </div> */
     );
 };
 

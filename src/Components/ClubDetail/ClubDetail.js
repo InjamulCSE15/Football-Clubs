@@ -1,13 +1,12 @@
-import { faFacebook, faInstagram } from '@fortawesome/free-brands-svg-icons';
+import { faFacebook, faInstagram, faTwitter, faYoutube } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
-import { Link } from 'react-router-dom';
 
 const ClubDetail = () => {
     const {teamId} = useParams();
     const [team, setTeam] = useState({});
-    const {strTeamBadge, strStadiumThumb, strAlternate, intFormedYear, strCountry, strSport, strGender, strStadiumDescription, strDescriptionEN, strFacebook, strTwitter, strInstagram, idTeam} = team;
+    const {strTeamBadge, strStadiumThumb, strAlternate, intFormedYear, strCountry, strSport, strGender, strStadiumDescription, strDescriptionEN, idTeam} = team;
     useEffect(() => {
         const url = `https://www.thesportsdb.com/api/v1/json/1/lookupteam.php?id=${teamId}`;
         fetch(url)
@@ -16,6 +15,7 @@ const ClubDetail = () => {
     },[teamId])
     return (
         <div>
+            <img src={strTeamBadge} alt=""/>
             <h3>{strAlternate}</h3>
             <h4>Founded: {intFormedYear}</h4>
             <h4>Country: {strCountry}</h4>
@@ -25,6 +25,7 @@ const ClubDetail = () => {
             <p>{strStadiumDescription}</p> <br/>
             <a href="https://www.facebook.com/"><FontAwesomeIcon icon={faFacebook}/></a>
             <a href="https://www.instagram.com/"><FontAwesomeIcon icon={faInstagram}/></a>
+            <a href="https://www.twitter.com/"><FontAwesomeIcon icon={faTwitter}/></a>
             
         </div>
     );

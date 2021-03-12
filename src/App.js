@@ -1,21 +1,37 @@
-import { faCoffee } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
+import Home from './Components/Home/Home';
+import NotFound from './Components/NotFound/NotFound';
+import ClubDetail from './Components/ClubDetail/ClubDetail';
+
 
 function App() {
-  const buttonStyle = {
-    color: 'white',
-    backgroundColor: 'blue',
-    height: '40px',
-    borderRadius: '5px',
-    margin: 'auto',
-    padding: 'auto'
-  }
+
   return (
-    <div>
-        <h1>This is font awesome</h1>
-        <button style={buttonStyle}><FontAwesomeIcon icon={faCoffee} />Explore Here</button>
-    </div>
+    <Router>
+      <Switch>
+        <Route path="/home">
+          <Home />
+        </Route>
+        <Route exact path="/">
+          <Home />
+        </Route>
+        <Route path="/club/:teamId">
+          <ClubDetail />
+        </Route>
+        <Route path="*">
+          <NotFound />
+        </Route>
+      </Switch>
+
+    </Router>
   );
 }
 

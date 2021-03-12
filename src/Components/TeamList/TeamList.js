@@ -1,3 +1,5 @@
+import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 import { Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
@@ -21,12 +23,28 @@ const TeamList = (props) => {
     }
     return (
 
-        <div style={cardStyle}>
-            <h3>{strTeam}</h3>
-            <img style={badgeStyle} src={strTeamBadge} alt="" />
-            <p>Sports Type: {strSport}<br></br></p>
-            <Link to={`/club/${idTeam}`}>Explore</Link>
+        <div className="card text-center col-4">
+            <div className="overflow">
+                <img src={strTeamBadge} alt="" />
+            </div>
+            <div className="card-body text-dark">
+                <h4 className="card-title">{strTeam}</h4>
+                <p className="card-text text-secondary">
+                    <b>Sports Type: </b>{strSport}
+                </p>
+                <Button variant="primary"><Link style={{textDecoration:'none', color:'white'}} to={`/club/${idTeam}`}>Explore  <FontAwesomeIcon icon={faArrowRight}/></Link> </Button>
+            </div>
         </div>
+
+        
+
+        // <div style={cardStyle}>
+        //     <h3>{strTeam}</h3>
+        //     <img style={badgeStyle} src={strTeamBadge} alt="" />
+        //     <p>Sports Type: {strSport}<br></br></p>
+        //     <Button variant="primary"><Link style={{textDecoration:'none', color:'white'}} to={`/club/${idTeam}`}>Explore</Link> </Button>
+            
+        // </div>
 
 
     );

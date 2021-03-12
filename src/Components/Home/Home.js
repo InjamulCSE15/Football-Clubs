@@ -1,6 +1,7 @@
 import React from 'react';
 import { useEffect } from 'react';
 import { useState } from 'react';
+import { Container } from 'react-bootstrap';
 import TeamList from '../TeamList/TeamList';
 
 const Home = () => {
@@ -15,22 +16,18 @@ const Home = () => {
 
     const bgColor = {
         backgroundColor: '#12073b',
-        display: 'grid',
-        gridTemplateColumns: 'repeat(3, 1fr)',
-        gridGap: '1.2 rem'
     }
-
     return (
-        <div>
+        <Container fluid>
             <div>
-                <img src="https://www.thesportsdb.com/images/media/team/stadium/w1anwa1588432105.jpg" alt=""/>
+                <img style={{width: '100%',height: '720px'}}src="https://www.thesportsdb.com/images/media/team/stadium/w1anwa1588432105.jpg" alt=""/>
             </div>
-            <div style={bgColor}>
+            <div className="row" style={bgColor}>
                 {
                     teams.map(team => <TeamList team={team}></TeamList>)
                 }
             </div>
-        </div>
+        </Container>
     );
 };
 

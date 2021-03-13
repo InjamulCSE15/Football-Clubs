@@ -15,7 +15,7 @@ const TeamList = (props) => {
                     <div class="card-body text-center">
                         <h3 className="card-title">{strTeam}</h3>
                         <p className="card-text">Sports Type: {strSport}</p> 
-                        <Button variant="primary"><Link style={{textDecoration:'none', color:'white'}} to={`/club/${idTeam}`}>Explore <FontAwesomeIcon icon={faArrowRight}/></Link> </Button>
+                        <Button variant="primary"><Link style={{textDecoration:'none', color:'white'}} to={`/club/${idTeam}`}>Explore <FontAwesomeIcon icon={faArrowRight}/></Link></Button>
                     </div>
             </div>
         </div>

@@ -32,7 +32,7 @@ const ClubDetail = () => {
             </div>
 
             <div className="container text-light d-flex" style={{ borderRadius: '5px', backgroundColor: '#3A42FF' }}>
-                <div className="col-md-8">
+                <div className="col-md-6">
                     <div className="card-body">
                         <h2 className="card-title">{strAlternate}</h2>
                         <h5><FontAwesomeIcon icon={faMapMarkerAlt} /> Founded: {intFormedYear}</h5>
@@ -41,9 +41,9 @@ const ClubDetail = () => {
                         <h5><FontAwesomeIcon icon={faMars} /> Gender: {strGender}</h5>
                     </div>
                 </div>
-                <div className="col-md-4 m-2">
+                <div className="col-md-6 m-2">
                     {
-                        strGender === 'Male' ? <img className="w-100 mx-auto d-flex" src={player} alt="" /> : <img className="w-100" src={strTeamBadge} alt="" />
+                        strGender === 'Male' ? <img className="w-100" src={player} alt="" /> : <img className="w-100" src={strTeamBadge} alt="" />
                     }
                 </div>
             </div>
@@ -51,9 +51,9 @@ const ClubDetail = () => {
             <div className="container" style={{marginTop: '2%' }}>
                 <p className="text-justify fw-light m-3" style={{ color: "white" }}>{strDescriptionEN} <br></br> <br></br> {strStadiumDescription}</p>
                 <div className="text-center">
-                    <a href="https://www.facebook.com/" style={socialMedia}><FontAwesomeIcon icon={faFacebook} size="2x" /></a>
-                    <a href="https://www.instagram.com/" style={socialMedia}><FontAwesomeIcon icon={faInstagram} size="2x" /></a>
-                    <a href="https://www.twitter.com/" style={socialMedia}><FontAwesomeIcon icon={faTwitter} size="2x" /></a>
+                    <a href="https://www.facebook.com/" style={socialMedia}><FontAwesomeIcon icon={faFacebook} size="3x" /></a>
+                    <a href="https://www.instagram.com/" style={socialMedia}><FontAwesomeIcon icon={faInstagram} size="3x" /></a>
+                    <a href="https://www.twitter.com/" style={socialMedia}><FontAwesomeIcon icon={faTwitter} size="3x" /></a>
                 </div>
             </div>
         </div>

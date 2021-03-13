@@ -19,8 +19,6 @@ const TeamList = (props) => {
                     </div>
             </div>
         </div>
-
-
     );
 };
 

@@ -11,7 +11,7 @@ const TeamList = (props) => {
 
         <div className="col">
             <div className="card">
-                <img style={{width:'100px', height:'100px', margin:'auto', padding:'10px'}}src={strTeamBadge} className="card-img-top" alt="..." />
+                <img style={{width:'150px', height:'150px', margin:'auto', padding:'10px'}}src={strTeamBadge} className="card-img-top" alt="..." />
                     <div class="card-body text-center">
                         <h3 className="card-title">{strTeam}</h3>
                         <p className="card-text">Sports Type: {strSport}</p> 

@@ -21,7 +21,7 @@ const ClubDetail = () => {
     }, [teamId])
 
     return (
-        <div style={{ backgroundColor: '#12073b' }}>
+        <div style={{ backgroundColor: '#12073b', minHeight: '100%'}}>
             <div className="mb-3" style={{
                 backgroundImage: `url(${strStadiumThumb})`, backgroundPosition: 'center',
                 backgroundSize: 'cover', backgroundRepeat: 'no-repeat', width: '100%', height: '500px'
@@ -31,7 +31,7 @@ const ClubDetail = () => {
                 </div>
             </div>
 
-            <div className="container text-light" style={{ borderRadius: '5px', backgroundColor: '#3A42FF' }}>
+            <div className="container text-light d-flex" style={{ borderRadius: '5px', backgroundColor: '#3A42FF' }}>
                 <div className="col-md-8">
                     <div className="card-body">
                         <h2 className="card-title">{strAlternate}</h2>
@@ -41,14 +41,14 @@ const ClubDetail = () => {
                         <h5><FontAwesomeIcon icon={faMars} /> Gender: {strGender}</h5>
                     </div>
                 </div>
-                <div className="col-md-4 ">
+                <div className="col-md-4 m-2">
                     {
-                        strGender === 'Male' ? <img className="w-100 img-fluid" src={player} alt="" /> : <img className="w-100" src={strTeamBadge} alt="" />
+                        strGender === 'Male' ? <img className="w-100 mx-auto d-flex" src={player} alt="" /> : <img className="w-100" src={strTeamBadge} alt="" />
                     }
                 </div>
             </div>
 
-            <div style={{ marginLeft: '12%', marginRight: '12%', marginTop: '2%' }}>
+            <div className="container" style={{marginTop: '2%' }}>
                 <p className="text-justify fw-light m-3" style={{ color: "white" }}>{strDescriptionEN} <br></br> <br></br> {strStadiumDescription}</p>
                 <div className="text-center">
                     <a href="https://www.facebook.com/" style={socialMedia}><FontAwesomeIcon icon={faFacebook} size="2x" /></a>

@@ -17,12 +17,16 @@ const Home = () => {
     const bgColor = {
         backgroundColor: '#12073b',
     }
+    const bannerStyle = {
+        backgroundImage: 'url(https://www.thesportsdb.com/images/media/team/stadium/w1anwa1588432105.jpg)',
+        width: '100%', height: '520px'
+    }
     return (
         <Container fluid>
-            <div>
-                <img style={{width: '100%',height: '720px'}}src="https://www.thesportsdb.com/images/media/team/stadium/w1anwa1588432105.jpg" alt=""/>
+            <div style={bannerStyle}>
+                <h1 className="text-center text-light p-5" style={{textSize: '10px'}}>Football Clubs</h1>
             </div>
-            <div className="row row-cols-1 row-cols-md-4 g-4 mt-5" style={bgColor}>
+            <div className="row row-cols-1 row-cols-md-4 g-4 mt-1" style={bgColor}>
                 {
                     teams.map(team => <TeamList team={team}></TeamList>)
                 }
